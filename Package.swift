@@ -12,6 +12,6 @@ let package = Package(
     dependencies: [
     ],
     targets: [
-        .target(name: "Copustools", path: "Sources/SupportingFiles/Dependencies/Copustools")
+        .target(name: "Copustools", path: "Sources/SupportingFiles/Dependencies/Copustools"),
     ]
 )
