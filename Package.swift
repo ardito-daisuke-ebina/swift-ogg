@@ -12,8 +12,19 @@ let package = Package(
     dependencies: [
     ],
     targets: [
-        // To debug with a local framework
-//        .binaryTarget(name: "YbridOpus", path: "YbridOpus.xcframework"),
-        .target(name: "Copustools", path: "Sources/SupportingFiles/Dependencies/Copustools"),
+        
+            .target(
+                name: "Copustools",
+                path: "Sources/SupportingFiles/Dependencies/Copustools",
+                exclude: [
+                ],
+                sources: [
+                    "include/"
+                ],
+                publicHeadersPath: "include",
+                cxxSettings: [
+                    .headerSearchPath("Sources/SupportingFiles/Dependencies/"),
+                ]
+            )
     ]
 )
