@@ -13,18 +13,6 @@ let package = Package(
     ],
     targets: [
         
-            .target(
-                name: "Copustools",
-                path: "Sources/SupportingFiles/Dependencies/Copustools",
-                exclude: [
-                ],
-                sources: [
-                    "include/"
-                ],
-                publicHeadersPath: "include",
-                cxxSettings: [
-                    .headerSearchPath("Sources/SupportingFiles/Dependencies/"),
-                ]
-            )
+            .target(name: "Copustools", path: "Sources/SupportingFiles/Dependencies/Copustools")
     ]
 )
