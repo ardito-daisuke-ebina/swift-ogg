@@ -18,5 +18,7 @@ let package = Package(
             path: "Sources/SupportingFiles/Dependencies/Copustools",
             publicHeadersPath: "include"
         ),
-    ]
+    ],
+    cLanguageStandard: .gnu11,
+    cxxLanguageStandard: .gnucxx14
 )
