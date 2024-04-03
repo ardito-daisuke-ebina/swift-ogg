@@ -16,7 +16,12 @@ let package = Package(
             name: "Copustools",
             dependencies: [],
             path: "Sources/SupportingFiles/Dependencies/Copustools",
-            publicHeadersPath: "include"
+            publicHeadersPath: ".",
+            cxxSettings: [
+                .headerSearchPath("Sources/SupportingFiles/Dependencies/Copustools"),
+                .headerSearchPath("Sources/SupportingFiles/Dependencies/"),
+                .headerSearchPath("Sources/SupportingFiles/Dependencies/Copustools/include"),
+            ]
         ),
     ],
     cLanguageStandard: .gnu11,
