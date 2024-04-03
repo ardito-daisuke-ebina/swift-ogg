@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "Copustools",
     platforms: [
-        .iOS(.v13), 
+        .iOS(.v13),
     ],
     products: [
         .library(name: "Copustools", targets: ["Copustools"]),
@@ -12,6 +12,11 @@ let package = Package(
     dependencies: [
     ],
     targets: [
-        .target(name: "Copustools", path: "Sources/SupportingFiles/Dependencies/Copustools"),
+        .target(
+            name: "Copustools",
+            dependencies: [],
+            path: "Sources/SupportingFiles/Dependencies/Copustools",
+            publicHeadersPath: "include"
+        ),
     ]
 )
